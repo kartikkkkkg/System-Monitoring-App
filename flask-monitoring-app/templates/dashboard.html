@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitoring Dashboard</title>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>System Monitoring Dashboard</h1>
+
+    <h2>Current Time</h2>
+    <p>{{ current_time }}</p>
+
+    <h2>CPU Usage</h2>
+    <p>{{ cpu_percent }}%</p>
+
+    <h2>Memory Usage</h2>
+    <p>{{ mem_percent }}%</p>
+
+    <h2>Disk Usage</h2>
+    <p>{{ disk_percent }}%</p>
+
+    <h2>CPU and Memory Usage Over Time</h2>
+    <div id="cpu-memory-graph">
+        {{ cpu_memory_fig|safe }}
+    </div>
+
+    <h2>Disk Usage Pie Chart</h2>
+    <div id="disk-usage-graph">
+        {{ disk_fig|safe }}
+    </div>
+
+    <script>
+        // Additional JavaScript for interactive features (if needed)
+    </script>
+</body>
+</html>
